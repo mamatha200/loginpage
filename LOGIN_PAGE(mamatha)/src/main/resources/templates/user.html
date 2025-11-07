@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>User Home</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background: #f4f6f8;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .home-container {
+            background: #fff;
+            padding: 50px;
+            border-radius: 12px;
+            box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+            width: 600px;
+            text-align: center;
+        }
+        h2 {
+            font-size: 36px;
+            color: #333;
+            margin-bottom: 20px;
+        }
+        p {
+            font-size: 22px;
+            margin: 20px 0;
+        }
+        .username {
+            font-weight: bold;
+            color: #007bff;
+        }
+        .btn {
+            display: inline-block;
+            margin: 15px;
+            padding: 15px 30px;
+            background: #007bff;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 8px;
+            font-size: 18px;
+            transition: background 0.3s ease;
+        }
+        .btn:hover {
+            background: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="home-container">
+        <h2>User Home</h2>
+        <p>Welcome <span class="username" th:text="${username}">user</span></p>
+        <p>
+            <a th:href="@{/logout}" class="btn">Logout</a>
+        </p>
+    </div>
+</body>
+</html>
